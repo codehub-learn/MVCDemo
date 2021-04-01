@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyMVC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,23 @@ namespace MyMVC.Controllers
         {
             return View();
         }
+
+        public IActionResult CustomerView()
+        {
+            List<Customer> Customers = new List<Customer> ();
+            Customers.Add(new Models.Customer { UserName = "Dimitris", Password = "xxx" });
+            Customers.Add(new Models.Customer { UserName = "John", Password = "yyy" });
+            return View(Customers);
+        }
+
+        public IActionResult CustomerCards()
+        {
+            List<Customer> Customers = new List<Customer> ();
+            Customers.Add(new Models.Customer { UserName = "Dimitris", Password = "xxx" });
+            Customers.Add(new Models.Customer { UserName = "John", Password = "yyy" });
+            return View(Customers);
+        }
+
+
     }
 }
