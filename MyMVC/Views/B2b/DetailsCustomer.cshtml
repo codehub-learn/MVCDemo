@@ -1,0 +1,36 @@
+﻿@model  MyMVC.Models.Customer 
+
+@{
+    Layout = "~/Views/Shared/_SharedB2b.cshtml";
+    ViewData["Title"] = "B2b Customers Cards Page";
+    ViewData["PageId"] = "4";
+}
+
+<h1>View</h1>
+
+<p>
+    <a asp-action="CreateCustomer">Create New</a>
+</p>
+
+
+
+<div class="container">
+  
+        <h2>Card Image</h2>
+        <p>Image at the top (card-img-top):</p>
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="~/images/img_avatar1.png" alt="Card image" style="width:25%">
+            <div class="card-body">
+                <h4 class="card-title">@Html.DisplayFor(item => item.UserName)</h4>
+                <p class="card-text">The password is @Html.DisplayFor(item => item.Password)</p>
+                <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+        </div>
+        <br>
+   
+
+    </div>
+
+
+
+ 
